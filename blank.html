@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="theme.css" type="text/css">
+  <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+            $("li").click(function(){
+                var file = $(this).attr("id") + ".html";
+		        $("#content").load(file, function() {
+		        $("#all").hide().fadeIn(2000);     
+		    });
+        });
+    });
+  </script>
+</head>
+
+<body class="">
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="微信图片_20180904162507.png" width="500" class="d-inline-block align-top" alt=""> </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="form-inline m-0">
+          <input class="form-control mr-2" type="text" placeholder="请输入关键字">
+          <button class="btn btn-primary" type="submit">
+            <i class="fa fa-fw fa-search"></i> 搜索</button>
+        </form>
+        <a class="btn btn-default navbar-btn btn-primary" href="login.html">
+          <i class="fa fa-user fa-fw"></i>登录</a>
+      </div>
+    </div>
+    <div class="btn-group">
+      <button class="btn dropdown-toggle btn-outline-primary" data-toggle="dropdown"> 教学管理 </button>
+      <div class="dropdown-menu">
+        <li class="dropdown-item">课程浏览</li>
+        <li class="dropdown-item" id="addcourse">课程添加</li>
+        <div class="dropdown-divider"></div>
+        <li class="dropdown-item">教师浏览</li>
+        <li class="dropdown-item">教师添加</li>
+        <div class="dropdown-divider"></div>
+        <li class="dropdown-item">班级信息</li>
+        <li class="dropdown-item">添加班级</li>
+        <div class="dropdown-divider"></div>
+        <li class="dropdown-item">学生信息</li>
+        <li class="dropdown-item">添加学生</li>
+        <div class="dropdown-divider"></div>
+      </div>
+    </div>
+    <div class="btn-group">
+      <button class="btn dropdown-toggle btn-outline-primary" data-toggle="dropdown"> 考试管理 </button>
+      <div class="dropdown-menu">
+        <li class="dropdown-item">题库管理</li>
+        <li class="dropdown-item">在线考试</li>
+      </div>
+    </div>
+    <div class="btn-group">
+      <button class="btn dropdown-toggle btn-outline-primary" data-toggle="dropdown"> 成绩统计 </button>
+      <div class="dropdown-menu">
+        <li class="dropdown-item" id="chengji">成绩汇总</li>
+        <li class="dropdown-item">成绩核算</li>
+        <li class="dropdown-item">成绩分析</li>
+      </div>
+    </div>
+  </nav>
+  <div class="container" id="content" style="height:150%"> </div>
+  <div class="bg-dark w-100 p-5 text-white h-25 m-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mt-3 text-center">
+          <p>© OS-J1 cizhaoyang 201540704436.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 10px;right:10px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:250px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;
+    <img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16">
+  </pingendo>
+</body>
+
+</html>
